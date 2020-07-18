@@ -53,7 +53,7 @@ class Blockchain:
 
         self.chain.append(new_block)
         print("Block's Hash key: " + new_block.hash)
-        print("New Block has been added"+ "\n")
+        print("New Block has been added" + "\n")
 
         reward_transaction = Transaction("System", miner_reward_address, self.reward)
         self.pendingTransaction.append(reward_transaction)
@@ -65,8 +65,8 @@ class Blockchain:
             previous_block = self.chain[x - 1]
 
             if (current_block.previousBlock != previous_block.hash):
-                return "\n"+"The Blockchain is not valid!"
-        return "\n"+"The Blockchain is stable and valid"
+                return "\n" + "The Blockchain is not valid!"
+        return "\n" + "The Blockchain is stable and valid"
 
     def create_transaction(self, transaction):
         self.pendingTransaction.append(transaction)
@@ -81,15 +81,15 @@ class Blockchain:
                     balance -= transaction.amount
                 if transaction.toWallet == wallet_address:
                     balance += transaction.amount
-        #Round Balance to 2 decimal places
-        balance = round(balance,2)
+        # Round Balance to 2 decimal places
+        balance = round(balance, 2)
         return balance
 
 
 class Transaction:
-    def __init__(self, fromWallet, toWallet, amount):
-        self.fromWallet = fromWallet
-        self.toWallet = toWallet
+    def __init__(self, from_wallet, to_wallet, amount):
+        self.fromWallet = from_wallet
+        self.toWallet = to_wallet
         self.amount = amount
 
 
