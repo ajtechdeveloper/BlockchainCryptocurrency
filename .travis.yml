@@ -2,10 +2,10 @@ language: python
 python:
     - "3.6"
 install:
-    - pip install hashlib
-    - pip install datetime
-    - pip install json
-    - pip install pprint
+    - pip3 install hashlib
+    - pip3 install datetime
+    - pip3 install json
+    - pip3 install pprint
 script: 
     - python setup.py build
     - python setup.py install
