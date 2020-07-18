@@ -1,10 +1,6 @@
 language: python
 python:
     - "3.6"
-install:
-    - pip install datetime
-    - pip install json
-    - pip install pprint
 script: 
     - python setup.py build
     - python setup.py install
