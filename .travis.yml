@@ -1,0 +1,11 @@
+language: python
+python:
+    - "3.8"
+install:
+    - pip install hashlib
+    - pip install datetime
+    - pip install json
+    - pip install pprint
+script: 
+    - python setup.py build
+    - python setup.py install
