@@ -3,7 +3,6 @@ import datetime
 import json
 import pprint
 
-
 class Block:
     def __init__(self, timestamp, transaction, previous_block=''):
         self.timestamp = timestamp
@@ -23,7 +22,6 @@ class Block:
         while self.hash[:difficulty] != difficulty_check:
             self.hash = self.calculate_block_hash_key(self.transaction, self.timestamp, self.difficultyIncrement)
             self.difficultyIncrement = self.difficultyIncrement + 1
-
 
 class Blockchain:
     def __init__(self):
@@ -85,13 +83,11 @@ class Blockchain:
         balance = round(balance, 2)
         return balance
 
-
 class Transaction:
     def __init__(self, from_wallet, to_wallet, amount):
         self.fromWallet = from_wallet
         self.toWallet = to_wallet
         self.amount = amount
-
 
 alpha = Blockchain()
 alpha.create_transaction(Transaction("Jane", "Jim", 7.4))
